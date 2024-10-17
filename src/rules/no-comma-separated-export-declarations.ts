@@ -39,6 +39,6 @@ export const rule = createRule({
     type: "problem",
     schema: [],
   },
-  name: "no-comma-separated-export-declaration",
+  name: "no-comma-separated-export-declarations",
   defaultOptions: [],
 });
