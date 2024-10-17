@@ -1,7 +1,11 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
 
-// TODO: figure ou twhat to put here
-export interface LintingRuleDocs {}
+// TODO: figure out what to put here
+export interface LintingRuleDocs {
+  descriptions: string;
+  recommended?: boolean;
+  requireTypeChecking?: boolean;
+}
 
 export const createRule = ESLintUtils.RuleCreator<LintingRuleDocs>(
   (name) =>
