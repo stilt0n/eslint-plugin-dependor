@@ -38,15 +38,8 @@ ruleTest.run('no-unquoted-import-or-export-in-jsx', rule, {
       code: `<p>You can not use unquoted import or export in jsx</p>`,
       errors: [
         {
-          column: 29,
-          endColumn: 35,
-          line: 1,
-          endLine: 1,
-          messageId: 'noUnquotedImportOrExportInJsx',
-        },
-        {
-          column: 39,
-          endColumn: 45,
+          column: 4,
+          endColumn: 52,
           line: 1,
           endLine: 1,
           messageId: 'noUnquotedImportOrExportInJsx',
