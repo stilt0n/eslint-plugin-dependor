@@ -4,7 +4,7 @@ export const rule = createRule({
   create(context) {
     return {
       JSXText(node) {
-        if (/import|export/.test(node.value)) {
+        if (/\b(import|export)\b/.test(node.value)) {
           context.report({
             messageId: 'noUnquotedImportOrExportInJsx',
             node,

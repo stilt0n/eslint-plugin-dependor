@@ -32,6 +32,7 @@ ruleTest.run('no-unquoted-import-or-export-in-jsx', rule, {
     `<Display text="export" />`,
     `<div>{"you can use export and import in quotes"}</div>`,
     `const foo = 'import';`,
+    `<span>Using importing or exporting is okay</span>`,
   ],
   invalid: [
     {
@@ -40,6 +41,18 @@ ruleTest.run('no-unquoted-import-or-export-in-jsx', rule, {
         {
           column: 4,
           endColumn: 52,
+          line: 1,
+          endLine: 1,
+          messageId: 'noUnquotedImportOrExportInJsx',
+        },
+      ],
+    },
+    {
+      code: `<p>import</p>`,
+      errors: [
+        {
+          column: 4,
+          endColumn: 4 + 'import'.length,
           line: 1,
           endLine: 1,
           messageId: 'noUnquotedImportOrExportInJsx',
